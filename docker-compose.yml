@@ -1,0 +1,12 @@
+services:
+  service-one:
+    build:
+      context: ./service_one
+    ports:
+      - "5001:5001"
+
+  service-two:
+    build:
+      context: ./service_two
+    ports:
+      - "5002:5002"
