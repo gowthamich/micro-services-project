@@ -1,4 +1,4 @@
-name: service_one CI
+name: service_two CI
 
 on:
   push:
@@ -78,8 +78,8 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/service_one:${{ github.sha }} \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/service_one:latest \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/service_two:${{ github.sha }} \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/service_two:latest \
             .
 
 
@@ -96,7 +96,7 @@ jobs:
       - name: Push image with commit SHA
         run: |
           docker push \
-            ${{ secrets.DOCKERHUB_USERNAME }}/service_one:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/service_two:${{ github.sha }}
 
 
       # --------------------------------
@@ -105,4 +105,4 @@ jobs:
       - name: Push latest image
         run: |
           docker push \
-            ${{ secrets.DOCKERHUB_USERNAME }}/service_one:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/service_two:latest
