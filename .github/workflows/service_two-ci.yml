@@ -16,6 +16,9 @@ jobs:
   build-test-docker:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: service_two
 
     steps:
 
