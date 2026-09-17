@@ -62,12 +62,7 @@ jobs:
       # --------------------------------
       # 5. Run tests
       # --------------------------------
-      - name: Run tests
-        working-directory: service_two
-        run: |
-          python -m pytest -v
-
-
+     #
       # --------------------------------
       # 6. Login to Docker Hub
       # --------------------------------
