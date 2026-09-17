@@ -45,7 +45,11 @@ jobs:
       - name: Check Python version
         run: python --version
 
-
+      - name: Check project structure
+        run: |
+          pwd
+          ls -la
+          ls -la service_one
       # --------------------------------
       # 4. Install dependencies
       # --------------------------------
