@@ -63,7 +63,9 @@ jobs:
       # 5. Run tests
       # --------------------------------
       - name: Run tests
-        run: pytest -v
+        working-directory: service_two
+        run: |
+          python -m pytest -v
 
 
       # --------------------------------
